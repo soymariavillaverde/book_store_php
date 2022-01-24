@@ -28,11 +28,18 @@ class BookStoreTest extends TestCase
         $this->assertEquals(0.0, $bookStore->total($basket));
     }
 
-    public function testTwoDifferent(): void
+    public function testFiveDifferent(): void
+    {
+        $bookStore = new BookStore;
+        $basket = [1, 2, 3, 4, 5];
+        $this->assertEquals(30.00, $bookStore->total($basket));
+    }
+
+/*      public function testTwoDifferent(): void
     {
         $bookStore = new BookStore;
         $basket = [1, 2];
         $this->assertEquals(15.2, $bookStore->total($basket));
-    }
+    } */
     
 }
